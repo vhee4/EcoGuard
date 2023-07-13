@@ -17,17 +17,17 @@ const ServicesView = () => {
   const data = localStorage.getItem(SWM_USER_DATA);
   const [isAuth, setIsAuth] = useState(true);
 
-  const { user, loading, error } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
-  const getSchedule = useCallback(() => {
-    if (user) {
-      dispatch(GetAllUserSchedule(user?.id));
-    }
-  }, [user]);
+  // const { user, loading, error } = useSelector((state) => state.user);
+  // const dispatch = useDispatch();
+  // const getSchedule = useCallback(() => {
+  //   if (user) {
+  //     dispatch(GetAllUserSchedule(user?.id));
+  //   }
+  // }, [user]);
 
-  useEffect(() => {
-    getSchedule();
-  }, [getSchedule]);
+  // useEffect(() => {
+  //   getSchedule();
+  // }, [getSchedule]);
 
   const getActiveUser = useCallback(() => {
     if (!data) {
