@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { register } from "../../../redux/slices/auth.slice";
+import { SWMimages } from "../../../assets";
 
 export const SignupContainer = () => {
   const dispatch = useDispatch();
@@ -88,11 +89,20 @@ export const SignupContainer = () => {
 
   return (
     <Auth message="Join our Smart Waste Management Vision and Make a Difference in Your Community">
-      <SignupView
-        formik={formik}
-        isLoading={isLoading}
-        handlePhoneInputChange={handlePhoneInputChange}
-      />
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2">
+        <div className="hidden lg:opacity-10 xl:opacity-100 lg:grid place-items-center">
+          <img
+            className="object-contain max-w-[40rem]"
+            src={SWMimages.auth_bg}
+            alt=""
+          />
+        </div>
+        <SignupView
+          formik={formik}
+          isLoading={isLoading}
+          handlePhoneInputChange={handlePhoneInputChange}
+        />
+      </div>
     </Auth>
   );
 };

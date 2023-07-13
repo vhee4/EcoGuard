@@ -1,4 +1,5 @@
 import React from "react";
+import { SWMimages } from "../../assets";
 import { Button, FormInput, FormSelect, Loader } from "../../components";
 
 const WasteDisposalView = ({
@@ -15,9 +16,18 @@ const WasteDisposalView = ({
   };
   return (
     <div className="w-full m-auto max-w-[1000px] px-4">
-      <h1 className="text-center text-[35px] font-bold mb-[1rem] mt-3">
-        Waste Disposal
-      </h1>
+      <div className="grid items-center justify-center">
+        <h1 className="font-['YsabeauInfant'] text-center text-[35px] font-bold mt-3">
+          Waste Pick-Up Request
+        </h1>
+        <div className="grid place-items-center">
+          <img
+            src={SWMimages.pick_up_truck}
+            alt=""
+            className="object-contain max-w-[12rem]"
+          />
+        </div>
+      </div>
       <form onSubmit={formik.handleSubmit} className="space-y-8">
         <div>
           <FormSelect

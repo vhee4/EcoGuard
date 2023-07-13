@@ -13,7 +13,7 @@ const LoginView = ({
   return (
     <div className="w-full m-auto max-w-[1000px]">
       <div className="dropInField">
-        <form onSubmit={formik.handleSubmit} className="space-y-8">
+        <form onSubmit={formik.handleSubmit} className="space-y-4">
           {selectedLoginOption === "email" && (
             <div>
               <FormInput
@@ -61,7 +61,7 @@ const LoginView = ({
               label="Enter Password"
             />
           </div>
-          <div className="flex items-center justify-center pt-4 pb-10">
+          <div className="flex items-center justify-center pt-2 pb-5">
             <Button
               type="submit"
               variant="full"
@@ -73,13 +73,13 @@ const LoginView = ({
             </Button>
           </div>
         </form>
-        <p className="font-['Montserrat'] text-[14px] text-[#666666] text-center font-bold mb-6">
+        <p className="font-['Montserrat'] text-[14px] text-[#666666] text-center font-bold mb-3">
           Don't have an account?{" "}
           <Link to={SIGNUP}>
             <span className="text-secondary">Sign Up</span>
           </Link>
         </p>
-        <p className="font-['Montserrat'] text-[14px] text-[#666666] text-center font-bold mb-6">
+        <p className="font-['Montserrat'] text-[14px] text-[#666666] text-center font-bold mb-3">
           Want to change log in option?{" "}
           <span
             onClick={() => setSelectedLoginOption("")}

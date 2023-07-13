@@ -16,6 +16,7 @@ import LoginOptionComp from "./LoginOptionComp";
 
 import "./styles.css";
 import { getAllUserSchedule } from "../../../redux/slices/userSchedule.slice";
+import { SWMimages } from "../../../assets";
 
 export const LoginContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -104,13 +105,22 @@ export const LoginContainer = () => {
   return (
     <Auth message="Welcome Back">
       {selectedLoginOption ? (
-        <LoginView
-          formik={formik}
-          isLoading={isLoading}
-          handlePhoneInputChange={handlePhoneInputChange}
-          selectedLoginOption={selectedLoginOption}
-          setSelectedLoginOption={setSelectedLoginOption}
-        />
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2">
+          <div className="hidden lg:opacity-10 xl:opacity-100 lg:grid place-items-center">
+            <img
+              className="object-contain max-w-[30rem]"
+              src={SWMimages.auth_bg}
+              alt=""
+            />
+          </div>
+          <LoginView
+            formik={formik}
+            isLoading={isLoading}
+            handlePhoneInputChange={handlePhoneInputChange}
+            selectedLoginOption={selectedLoginOption}
+            setSelectedLoginOption={setSelectedLoginOption}
+          />
+        </div>
       ) : (
         <LoginOptionComp setSelectedLoginOption={setSelectedLoginOption} />
       )}

@@ -9,3 +9,6 @@ export const wallet_icon = `${IMG_PATH}/44956059-removebg-preview.png`;
 export const calendar_icon = `${IMG_PATH}/45949220-removebg-preview.png`;
 
 export const check_mark = `${IMG_PATH}/check_mark.svg`;
+export const auth_bg = `${IMG_PATH}/28127401.jpg`;
+export const pick_up_truck = `${IMG_PATH}/garbage-truck-in-green-color-with-trash-bag-vector-46239142-removebg-preview.png`;
+export const recycle_image = `${IMG_PATH}/25888333-removebg-preview.png`;

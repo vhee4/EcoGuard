@@ -79,8 +79,8 @@ const ProfileView = ({
   }
   return (
     <div className="w-full m-auto max-w-[1000px] px-4">
-      <h1 className="text-center text-[35px] font-bold mb-[1rem] mt-3">
-        YOUR PROFILE
+      <h1 className="font-['YsabeauInfant'] text-center text-[35px] font-bold mb-[1rem] mt-3">
+        About You
       </h1>
       <form onSubmit={formik.handleSubmit} className="space-y-8">
         <div>

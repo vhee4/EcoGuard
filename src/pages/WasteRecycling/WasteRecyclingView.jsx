@@ -1,5 +1,6 @@
 import moment from "moment";
 import React from "react";
+import { SWMimages } from "../../assets";
 import {
   AppDatePicker,
   Button,
@@ -25,9 +26,18 @@ const WasteRecycling = ({
   const [pod, setPod] = React.useState();
   return (
     <div className="w-full m-auto max-w-[1000px] px-4">
-      <h1 className="text-center text-[35px] font-bold mb-[1rem] mt-3">
-        Waste Recycling
-      </h1>
+      <div className="grid items-center justify-center">
+        <h1 className="font-['YsabeauInfant'] text-center text-[35px] font-bold mt-3">
+          Recycling Pick-Up Request
+        </h1>
+        <div className="grid place-items-center">
+          <img
+            src={SWMimages.recycle_image}
+            alt=""
+            className="object-contain max-w-[12rem]"
+          />
+        </div>
+      </div>
       <form onSubmit={formik.handleSubmit} className="space-y-8">
         <div>
           <FormSelect

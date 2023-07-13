@@ -22,7 +22,7 @@ const FormInput = ({
               htmlFor={id}
               className={`block ${
                 size === "sm" ? "text-[12px]" : "text-lg"
-              } text-[#000000] font-['Spectral'] mb-[6px]`}
+              } text-[#000000] font-['Spectral'] mb-[2px]`}
             >
               {label}
             </label>
