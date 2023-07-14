@@ -13,3 +13,5 @@ export const auth_bg = `${IMG_PATH}/28127401.jpg`;
 export const pick_up_truck = `${IMG_PATH}/garbage-truck-in-green-color-with-trash-bag-vector-46239142-removebg-preview.png`;
 export const recycle_image = `${IMG_PATH}/25888333-removebg-preview.png`;
 export const payment_bg = `${IMG_PATH}/18306635-removebg-preview.png`;
+export const news_feeds = `${IMG_PATH}/undraw_Online_everywhere_re_n3lr.png`;
+export const resources = `${IMG_PATH}/undraw_Data_extraction_re_0rd3.png`;

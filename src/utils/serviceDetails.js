@@ -1,4 +1,5 @@
 import { SWMimages } from "../assets";
+
 import {
   SCHEDULE_HISTORY,
   WASTE_DISPOSAL,
@@ -39,6 +40,24 @@ export const ServiceDetails = [
     icon: SWMimages.calendar_icon,
     title: "View History",
     link: SCHEDULE_HISTORY,
+    subText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita eligendi ducimus nisi praesentium itaque.",
+  },
+  {
+    id: 5,
+    name: "Resources",
+    icon: SWMimages.resources,
+    title: "View Resources",
+    link: "",
+    subText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita eligendi ducimus nisi praesentium itaque.",
+  },
+  {
+    id: 6,
+    name: "News Feeds",
+    icon: SWMimages.news_feeds,
+    title: "View News Feeds",
+    link: "",
     subText:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita eligendi ducimus nisi praesentium itaque.",
   },
