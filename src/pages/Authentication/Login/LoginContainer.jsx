@@ -106,7 +106,7 @@ export const LoginContainer = () => {
     <Auth message="Welcome Back">
       {selectedLoginOption ? (
         <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-          <div className="hidden lg:opacity-60 xl:opacity-100 lg:grid place-items-center">
+          <div className="hidden lg:opacity-100 xl:opacity-100 lg:grid place-items-center">
             <img
               className="object-contain max-w-[30rem]"
               src={SWMimages.auth_bg}

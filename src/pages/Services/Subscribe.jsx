@@ -26,7 +26,7 @@ const Subscribe = ({ setSubscriptionPlan, link }) => {
             <hr />
           </h4>
           <p className="text-center font-['Lato'] text-[#666666] text-[14px]">
-            The amount of our monthly payment is 7000 naira
+          Our monthly payment is 7000 naira
           </p>
           <h1>Monthly</h1>
         </div>
@@ -62,7 +62,7 @@ const Subscribe = ({ setSubscriptionPlan, link }) => {
             <hr />
           </h4>
           <p className="text-center font-['Lato'] text-[#666666] text-[14px]">
-            The amount of our yearly payment is 70,000 naira
+          Our yearly payment is 70,000 naira
           </p>
           <h1>Yearly</h1>
         </div>
