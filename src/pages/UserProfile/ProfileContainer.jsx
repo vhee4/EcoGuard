@@ -36,11 +36,12 @@ export const ProfileContainer = () => {
         .oneOf([Yup.ref("password"), null], "Passwords must match")
         .required("Please confirm your password"),
     }),
-    onSubmit: (details) => {
+    onSubmit: (details, { resetForm }) => {
       setIsCpLoading(true);
       console.log(details, "CP", user?.email);
       setTimeout(() => {
         toast.success("Password Changed Successfully");
+        resetForm();
         setIsCpLoading(false);
       }, 3000);
       // void dispatch(
