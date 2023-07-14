@@ -109,7 +109,7 @@ export const ProfileContainer = () => {
             return;
           }
           if (res) {
-            toast.success(res);
+            toast.success("Profile Updated Successfully");
             dispatch(getUserByEmail(userEmail));
             setIsLoading(false);
           }
