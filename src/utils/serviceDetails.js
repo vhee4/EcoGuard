@@ -39,7 +39,7 @@ export const ServiceDetails = [
     name: "Schedule History",
     icon: SWMimages.calendar_icon,
     title: "View History",
-    link: SCHEDULE_HISTORY,
+    link: "",
     subText:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita eligendi ducimus nisi praesentium itaque.",
   },
