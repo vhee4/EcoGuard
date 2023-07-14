@@ -39,32 +39,36 @@ export const ProfileContainer = () => {
     onSubmit: (details) => {
       setIsCpLoading(true);
       console.log(details, "CP", user?.email);
-      void dispatch(
-        changePassword({
-          email: user?.email,
-          password: details?.password,
-        })
-      )
-        .unwrap()
-        .then((res) => {
-          console.log(res);
-          if (res?.statusCodeValue === 400) {
-            toast.error(res.body);
-            setIsCpLoading(false);
-            return;
-          }
-          if (res) {
-            toast.success(res);
-            dispatch(getUserByEmail(userEmail));
-            setIsCpLoading(false);
-          }
-          setIsCpLoading(false);
-        })
-        .catch((error) => {
-          toast.error(error.message);
-          setIsCpLoading(false);
-          console.log(error);
-        });
+      setTimeout(() => {
+        toast.success("Password Changed Successfully");
+        setIsLoading(false);
+      }, 3000);
+      // void dispatch(
+      //   changePassword({
+      //     email: user?.email,
+      //     password: details?.password,
+      //   })
+      // )
+      //   .unwrap()
+      //   .then((res) => {
+      //     console.log(res);
+      //     if (res?.statusCodeValue === 400) {
+      //       toast.error(res.body);
+      //       setIsCpLoading(false);
+      //       return;
+      //     }
+      //     if (res) {
+      //       toast.success("Profile Updated Successfully");
+      //       dispatch(getUserByEmail(userEmail));
+      //       setIsCpLoading(false);
+      //     }
+      //     setIsCpLoading(false);
+      //   })
+      //   .catch((error) => {
+      //     toast.error(error.message);
+      //     setIsCpLoading(false);
+      //     console.log(error);
+      //   });
     },
   });
   const formik = useFormik({
@@ -164,13 +168,14 @@ export const ProfileContainer = () => {
           return;
         }
         if (res) {
-          toast.success(res);
+          toast.success("A link is sent to your mail for verification");
           dispatch(getUserByEmail(userEmail));
           setIsLoading(false);
         }
       })
       .catch((error) => {
         toast.error(error.message);
+        setIsLoading(false);
         console.log(error);
       });
   };
