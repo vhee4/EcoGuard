@@ -41,7 +41,7 @@ export const ProfileContainer = () => {
       console.log(details, "CP", user?.email);
       setTimeout(() => {
         toast.success("Password Changed Successfully");
-        setIsLoading(false);
+        setIsCpLoading(false);
       }, 3000);
       // void dispatch(
       //   changePassword({

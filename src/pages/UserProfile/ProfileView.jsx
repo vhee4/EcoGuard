@@ -333,7 +333,7 @@ const ProfileView = ({
               className="text-[12px]"
               disabled={isCpLoading || isLoading}
             >
-              {isLoading ? <Loader /> : "Change Password"}
+              {isCpLoading ? <Loader /> : "Change Password"}
             </Button>
           </div>
         </form>
