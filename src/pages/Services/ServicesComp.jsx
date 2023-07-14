@@ -12,9 +12,15 @@ const ServicesComp = ({
   isAuth,
   comingSoonModal,
   setcomingSoonModal,
+
+  setSubscribeModal,
+  setWasteLink,
+  subScriptionPlan,
 }) => {
   const [showHiddenContent, setShowHiddenContent] = useState(false);
   const navigate = useNavigate();
+
+  const isSubscribed = localStorage.getItem("isSubscribedUser");
 
   return (
     <div
@@ -35,13 +41,18 @@ const ServicesComp = ({
             size="sm"
             className="text-[12px] w-[80%] font-bold"
             onClick={() => {
+              setWasteLink(data?.link);
               if (isAuth) {
                 if (!data?.link) {
                   setShowHiddenContent(false);
                   setcomingSoonModal(!comingSoonModal);
                   return;
                 }
-                navigate(data?.link);
+                if (isSubscribed) {
+                  navigate(data?.link);
+                } else {
+                  setSubscribeModal(true);
+                }
               } else {
                 setShowHiddenContent(false);
                 setOpenModal(!openModal);

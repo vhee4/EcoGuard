@@ -17,3 +17,5 @@ export const DASHBOARD = "/dashboard";
 
 export const SETTINGS = "/profile/settings";
 export const LOGOUT = "/profile/logout";
+
+export const CHECK_OUT = "/checkout";

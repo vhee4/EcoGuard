@@ -105,7 +105,7 @@ const WasteDisposalView = ({
             size="lg"
             className="text-[12px]"
           >
-            {isLoading ? <Loader /> : "Schedule Appointment"}
+            {isLoading ? <Loader /> : "Schedule Request"}
           </Button>
         </div>
       </form>

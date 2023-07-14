@@ -5,12 +5,16 @@ import { ServiceDetails } from "../../utils/serviceDetails";
 import NotAllowed from "./NotAllowed";
 import ComingSoon from "./ComingSoon";
 import ServicesComp from "./ServicesComp";
+import Subscribe from "./Subscribe";
 
 const ServicesView = () => {
   const [openModal, setOpenModal] = useState(false);
   const [comingSoonModal, setcomingSoonModal] = useState(false);
+  const [subscribeModal, setSubscribeModal] = useState(false);
+  const [subScriptionPlan, setSubscriptionPlan] = useState("");
   const data = localStorage.getItem(SWM_USER_DATA);
   const [isAuth, setIsAuth] = useState(true);
+  const [wasteLink, setWasteLink] = useState("");
 
   const getActiveUser = useCallback(() => {
     if (!data) {
@@ -36,6 +40,9 @@ const ServicesView = () => {
               setOpenModal={setOpenModal}
               comingSoonModal={comingSoonModal}
               setcomingSoonModal={setcomingSoonModal}
+              setSubscribeModal={setSubscribeModal}
+              subScriptionPlan={subScriptionPlan}
+              setWasteLink={setWasteLink}
               isAuth={isAuth}
             />
           );
@@ -51,6 +58,17 @@ const ServicesView = () => {
         <Modal
           content={<ComingSoon />}
           setOpenModal={() => setcomingSoonModal(false)}
+        />
+      )}
+      {subscribeModal && (
+        <Modal
+          content={
+            <Subscribe
+              setSubscriptionPlan={setSubscriptionPlan}
+              link={wasteLink}
+            />
+          }
+          setOpenModal={() => setSubscribeModal(false)}
         />
       )}
     </div>

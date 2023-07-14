@@ -13,6 +13,7 @@ import {
   WasteRecycling,
   ScheduleHistory,
   ForgotPassword,
+  Checkout,
 } from "../pages";
 import {
   HOME,
@@ -27,6 +28,7 @@ import {
   FORGOT_PASSWORD,
   CONTACT_US,
   RESET_PASSWORD,
+  CHECK_OUT,
 } from "./CONSTANTS";
 
 import AuthGaurd from "../authGaurd";
@@ -42,6 +44,7 @@ const RouterConfig = () => {
         <Route path={WASTE_DISPOSAL} element={<WasteDisposal />} />
         <Route path={WASTE_RECYCLING} element={<WasteRecycling />} />
         <Route path={SCHEDULE_HISTORY} element={<ScheduleHistory />} />
+        <Route path={CHECK_OUT} element={<Checkout />} />
         <Route path={PROFILE} element={<Profile />} />
         <Route path={LOGIN} element={<Login />} />
         <Route path={FORGOT_PASSWORD} element={<ForgotPassword />} />

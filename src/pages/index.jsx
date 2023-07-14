@@ -7,3 +7,4 @@ export { default as Profile } from "./UserProfile";
 export { default as WasteDisposal } from "./WasteDisposal";
 export { default as WasteRecycling } from "./WasteRecycling";
 export { default as ScheduleHistory } from "./ScheduleHistory";
+export { default as Checkout } from "./Checkout";
