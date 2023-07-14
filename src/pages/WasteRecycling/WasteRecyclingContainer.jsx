@@ -66,7 +66,7 @@ export const WasteRecyclingContainer = () => {
             return;
           }
           if (res) {
-            toast.success("Updated Successfully");
+            toast.success(res);
             resetForm();
             navigate(SERVICES);
             setIsLoading(false);

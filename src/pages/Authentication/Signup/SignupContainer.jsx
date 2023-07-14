@@ -90,7 +90,7 @@ export const SignupContainer = () => {
   return (
     <Auth message="Join our Smart Waste Management Vision and Make a Difference in Your Community">
       <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-        <div className="hidden lg:opacity-10 xl:opacity-100 lg:grid place-items-center">
+        <div className="hidden lg:opacity-60 xl:opacity-100 lg:grid place-items-center">
           <img
             className="object-contain max-w-[40rem]"
             src={SWMimages.auth_bg}
