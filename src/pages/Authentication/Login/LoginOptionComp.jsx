@@ -8,7 +8,7 @@ const LoginOptionComp = ({ setSelectedLoginOption }) => {
     <div className="w-full m-auto max-w-[1000px] px-4">
       <div className="text-center text-[20px] font-bold mb-[1rem] mt-0">
         <h1 className="mb-5 text-[20px]">How do you wish to login</h1>
-        <div className="grid grid-cols-3 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center">
           <div
             onClick={() => setSelectedLoginOption("email")}
             className="flex-col items-center justify-center cursor-pointer border p-4 rounded-lg border-[#628c23] hover:bg-slate-200 transition-all duration-500"
